@@ -1,0 +1,16 @@
+<div class="field">
+  <label>{{label}}</label>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input type="text"
+    matInput
+      placeholder="Select"
+      [formControl]="control"
+      [matAutocomplete]="autoList"
+  >
+    <mat-autocomplete #autoList="matAutocomplete" >
+      <mat-option *ngFor="let autocompleteValue of filteredValues | async" [value]="autocompleteValue">
+        {{autocompleteValue}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

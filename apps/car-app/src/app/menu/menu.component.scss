@@ -1,0 +1,16 @@
+.menu {
+  font-family: 'DM Sans';
+  display: grid;
+  grid-template-columns: 30% 15% 15% 34% 6%;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+.logo {
+  display: flex;
+  img{
+    width: 25px;
+    margin-right: 5px;
+  }
+}

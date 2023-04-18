@@ -1,0 +1,40 @@
+
+  .example-full-width {
+    width: 300px;
+  }
+
+  label {
+    color: white;
+  }
+
+  .field {
+    display: flex;
+    max-width: 300px;
+    flex-wrap: wrap;
+  }
+
+  :host ::ng-deep {
+
+    .mat-mdc-text-field-wrapper {
+        background: white;
+        border: 1px solid gray;
+        border-radius: 5px;
+    }
+
+    .mdc-line-ripple {
+        display: none;
+    }
+
+    .mdc-menu-surface--open {
+        background: white !important;
+        border-radius: 5px;
+    }
+
+    .mat-mdc-form-field-infix {
+        padding: 0 !important;
+    }
+
+    .mat-mdc-form-field-flex {
+        max-height: 30px;
+    }
+  }

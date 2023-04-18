@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "projects": {
+    "car-app": {
+      "projectType": "application",
+      "schematics": {
+      },
+      "root": "apps/car-app",
+      "sourceRoot": "apps/car-app/src",
+      "prefix": "car",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/car-app",
+            "index": "apps/car-app/src/index.html",
+            "main": "apps/car-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.base.json",
+            "aot": true,
+            "assets": [
+              "apps/car-app/src/favicon.ico",
+              "apps/car-app/src/assets"
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/car-app/src/styles.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/car-app/src/environments/environment.ts",
+                  "with": "apps/car-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "car-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "car-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "car-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/car-app/tsconfig.app.json",
+              "apps/car-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/car-app/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "jest.config.js",
+            "tsConfig": "tsconfig.spec.json",
+            "setupFile": "src/test-setup.ts",
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "car-app"
+}

@@ -1,0 +1,18 @@
+.content {
+  border: 1px solid #ECEDED;
+  border-radius: 6px;
+  background-color: #ECEDED;
+  font-family: 'DM Sans';
+  width: fit-content;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.is-active {
+  color: black !important;
+}

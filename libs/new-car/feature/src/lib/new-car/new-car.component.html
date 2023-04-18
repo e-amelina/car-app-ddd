@@ -1,0 +1,22 @@
+<div class="content">
+    <img src="assets/background-new-car.png" class="backgrd">
+    <p class="title">Quick selection of a new car</p>
+    <div class="car-block"></div>
+    <form class="form">
+        <div class="left-block">
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Brand"></app-input-autocomplete>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Model"></app-input-autocomplete>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Price, from"></app-input-autocomplete>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Price, to"></app-input-autocomplete>
+        </div>
+        <div class="right-block">
+            <form [formGroup]="group" class="radio-group">
+                <label>Gear Box</label>
+                <app-custom-radio-button value='auto' formControlName="radios">Automated</app-custom-radio-button>
+                <app-custom-radio-button value='manual' formControlName="radios">Manual</app-custom-radio-button>
+                <app-custom-radio-button value='any' formControlName="radios">Any</app-custom-radio-button>
+            </form>
+            <button class="btn-submit">Show Selection</button>
+        </div>
+    </form>
+</div>

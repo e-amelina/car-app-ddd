@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@car-app/change-car/domain": ["libs/change-car/domain/src/index.ts"],
+      "@car-app/change-car/feature": ["libs/change-car/feature/src/index.ts"],
+      "@car-app/new-car/domain": ["libs/new-car/domain/src/index.ts"],
+      "@car-app/new-car/feature": ["libs/new-car/feature/src/index.ts"],
+      "@car-app/shared/ui-common": ["libs/shared/ui-common/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

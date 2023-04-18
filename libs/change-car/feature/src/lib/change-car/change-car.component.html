@@ -1,0 +1,23 @@
+<div class="content">
+    <img src="../../../assets/car-exchange.jpg" class="backgrd">
+    <p class="title">Car exchange (Trade-in)</p>
+    <div class="car-block"></div>
+    <form class="form">
+        <div class="right-block">
+            <div>
+                <label>Your Name</label>
+                    <input type="text" matInput placeholder="Olena Amelina"  [formControl]="name">
+            </div>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Brand"></app-input-autocomplete>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Model"></app-input-autocomplete>
+            
+            <div>
+                <label>Your Phone</label>
+                    <input type="text" matInput placeholder="+380"  [formControl]="phone">
+            </div>
+           <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Production Year"></app-input-autocomplete>
+            <app-input-autocomplete [autocompleteValues]="['a', 'aa', 'ah']" label="Mileage"></app-input-autocomplete>
+        </div>
+        <button class="btn-submit">Create Application</button>
+    </form>
+</div>
